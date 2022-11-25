@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\WeatherForecast.UI.csproj": {}
+    "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\WeatherForecast.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\WeatherForecast.UI.csproj": {
+    "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\WeatherForecast.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\WeatherForecast.UI.csproj",
+        "projectUniqueName": "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\WeatherForecast.UI.csproj",
         "projectName": "WeatherForecast.UI",
-        "projectPath": "C:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\WeatherForecast.UI.csproj",
+        "projectPath": "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\WeatherForecast.UI.csproj",
         "packagesPath": "C:\\Users\\cagda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\obj\\",
+        "outputPath": "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cagda\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,56 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Http.Extensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -49,6 +99,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

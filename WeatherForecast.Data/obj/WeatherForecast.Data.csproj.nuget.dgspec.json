@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.Data\\WeatherForecast.Data.csproj": {}
+    "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.Data\\WeatherForecast.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.Data\\WeatherForecast.Data.csproj": {
+    "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.Data\\WeatherForecast.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.Data\\WeatherForecast.Data.csproj",
+        "projectUniqueName": "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.Data\\WeatherForecast.Data.csproj",
         "projectName": "WeatherForecast.Data",
-        "projectPath": "C:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.Data\\WeatherForecast.Data.csproj",
+        "projectPath": "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.Data\\WeatherForecast.Data.csproj",
         "packagesPath": "C:\\Users\\cagda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.Data\\obj\\",
+        "outputPath": "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cagda\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
