@@ -4,34 +4,30 @@ using System.Linq;
 using System.Collections;
 using System.Net.Http;
 using System;
+using System.ComponentModel.Annotations;
+using WeatherForecast.Data;
+using System.Web.Http;
 
 namespace WeatherForecast.UI.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/Weather")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
+    private readonly IWeatherService _weatherService;
+    public WeatherForecastController(IWeatherService weatherService)
     {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
-    private readonly ILogger<WeatherForecastController> _logger;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
-    {
-        _logger = logger;
+        _weatherService = weatherService;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    [HttpGet(Name = "GetTodayByCity")]
+    public IEnumerable<WeatherForecast> GetTodaysWeatherByCity([FromBody] GetTodayByCityRequestModel requestModel)
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        if (!ModelState.IsValid)
         {
-            Date = DateTime.Now.AddDays(index),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+            return StatusCode(StatusCodes.Status400BadRequest, ModelState);
+        }
+
+        return _weatherService.GetTodayByCity(requestModel.City);
     }
 }

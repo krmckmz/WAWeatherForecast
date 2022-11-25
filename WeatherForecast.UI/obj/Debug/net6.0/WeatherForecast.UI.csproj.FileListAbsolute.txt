@@ -1,0 +1,9 @@
+C:\Users\cagda\Desktop\WAWeatherForecast\WeatherForecast.UI\obj\Debug\net6.0\WeatherForecast.UI.csproj.AssemblyReference.cache
+C:\Users\cagda\Desktop\WAWeatherForecast\WeatherForecast.UI\obj\Debug\net6.0\WeatherForecast.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cagda\Desktop\WAWeatherForecast\WeatherForecast.UI\obj\Debug\net6.0\WeatherForecast.UI.AssemblyInfoInputs.cache
+C:\Users\cagda\Desktop\WAWeatherForecast\WeatherForecast.UI\obj\Debug\net6.0\WeatherForecast.UI.AssemblyInfo.cs
+C:\Users\cagda\Desktop\WAWeatherForecast\WeatherForecast.UI\obj\Debug\net6.0\WeatherForecast.UI.csproj.CoreCompileInputs.cache
+C:\Users\cagda\Desktop\WAWeatherForecast\WeatherForecast.UI\obj\Debug\net6.0\WeatherForecast.UI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\cagda\Desktop\WAWeatherForecast\WeatherForecast.UI\obj\Debug\net6.0\WeatherForecast.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\cagda\Desktop\WAWeatherForecast\WeatherForecast.UI\obj\Debug\net6.0\WeatherForecast.UI.RazorAssemblyInfo.cache
+C:\Users\cagda\Desktop\WAWeatherForecast\WeatherForecast.UI\obj\Debug\net6.0\WeatherForecast.UI.RazorAssemblyInfo.cs
