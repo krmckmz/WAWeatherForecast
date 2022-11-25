@@ -4,9 +4,8 @@ using System.Linq;
 using System.Collections;
 using System.Net.Http;
 using System;
-using System.ComponentModel.Annotations;
+using System.ComponentModel.DataAnnotations;
 using WeatherForecast.Data;
-using System.Web.Http;
 
 namespace WeatherForecast.UI.Controllers;
 
@@ -21,7 +20,7 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetTodayByCity")]
-    public IEnumerable<WeatherForecast> GetTodaysWeatherByCity([FromBody] GetTodayByCityRequestModel requestModel)
+    public ObjectResult GetTodaysWeatherByCity([FromBody] GetTodayByCityRequestModel requestModel)
     {
         if (!ModelState.IsValid)
         {
