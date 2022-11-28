@@ -23,9 +23,7 @@ public class WeatherForecastController : ControllerBase
     public ObjectResult GetTodaysWeatherByCity([FromBody] GetTodayByCityRequestModel requestModel)
     {
         if (!ModelState.IsValid)
-        {
-            return StatusCode(StatusCodes.Status400BadRequest, ModelState);
-        }
+            return BadRequest(ModelState);
 
         return _weatherService.GetTodayByCity(requestModel.City);
     }
