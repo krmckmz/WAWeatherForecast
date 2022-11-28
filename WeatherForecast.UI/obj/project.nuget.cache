@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "D/zQvDAy9J0yGnup0RXPEYHZPpgf6CFk/OulFui2i2OoRmSwYHOC1YMXO4oCy4F4D8LE+ptchf3DxvYuRRri0Q==",
+  "dgSpecHash": "zz7MShLyoBXiwhL9d2AwUW1/Qm2rZYIZKe1Scf48zwvwPslkt+0d6rn8BNNMEs1FQKvZE7e1ZDfGBzRzjVEaAg==",
   "success": true,
   "projectFilePath": "c:\\Users\\cagda\\Desktop\\WAWeatherForecast\\WeatherForecast.UI\\WeatherForecast.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cagda\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\cagda\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
-    "C:\\Users\\cagda\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
+    "C:\\Users\\cagda\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.4.0\\fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
     "C:\\Users\\cagda\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\cagda\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\cagda\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
