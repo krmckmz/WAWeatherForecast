@@ -58,6 +58,22 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "OpenWeather": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "OpenWeather.Core": {
+              "target": "Package",
+              "version": "[1.0.0.25, )"
+            },
+            "OpenWeatherMap": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "OpenWeatherMap.Standard": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "System.Collections": {
               "target": "Package",
               "version": "[4.3.0, )"

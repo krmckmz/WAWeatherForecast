@@ -1,10 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Net.Http;
-using System.Linq;
-using System.Collections;
-using System.Net.Http;
-using System;
-using System.ComponentModel.DataAnnotations;
 using WeatherForecast.Data;
 
 namespace WeatherForecast.UI.Controllers;
@@ -25,6 +19,11 @@ public class WeatherForecastController : ControllerBase
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        return _weatherService.GetTodayByCity(requestModel.City);
+        var result = _weatherService.GetTodayByCity(requestModel);
+
+        if (result.Result.Status)
+            return Ok(result);
+        else
+            return BadRequest(result);
     }
 }

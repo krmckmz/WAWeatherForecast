@@ -2,5 +2,5 @@
 
 public class GetTodayByCityRequestModel
 {
-   public string City { get; set; }
+   public string? CityId { get; set; }
 }

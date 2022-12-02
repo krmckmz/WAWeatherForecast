@@ -23,4 +23,8 @@
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
     <PackageReference Include="System.Runtime" Version="4.3.1" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherForecast.Data\WeatherForecast.Data.csproj" />
+    <ProjectReference Include="..\WeatherForecast.Application\WeatherForecast.Application.csproj" />
+  </ItemGroup>
 </Project>
