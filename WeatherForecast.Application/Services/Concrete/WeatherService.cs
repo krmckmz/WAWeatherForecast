@@ -1,6 +1,5 @@
 ﻿namespace WeatherForecast.Application;
 using WeatherForecast.Data;
-using System.Text;
 using Newtonsoft.Json;
 
 public class WeatherService : IWeatherService
@@ -8,25 +7,28 @@ public class WeatherService : IWeatherService
     private const string apiRequestDomain = "http://api.openweathermap.org";
     private const string apiKey = "e7f039d94cc5ced34305901239329810";
 
-    public string GetApiUrl(GetTodayByCityRequestModel requestModel)
+    public string GetApiEndpoint(GetTodayByCityRequestModel requestModel)
     {
         if (String.IsNullOrEmpty(requestModel.CityId))
             return string.Empty;
 
-        StringBuilder queryStringBuilder = new StringBuilder();
+        var endpointBuilder = new EndpointBuilder(apiRequestDomain, apiKey);
+        string endPoint = endpointBuilder.Append("data")
+                                         .Append("2.5")
+                                         .Append("weather")
+                                         .AppendParam("id", requestModel.CityId)
+                                         .AppendParam("appid", apiKey)
+                                         .AppendParam("units", UnitType.Metric.ToString())
+                                         .Build();
 
-        queryStringBuilder.Append("/data/2.5/weather?");
-        queryStringBuilder.Append($"id={requestModel.CityId}&");
-        queryStringBuilder.Append($"appid={apiKey}&");
-        queryStringBuilder.Append($"units={UnitType.Metric.ToString()}");
-
-        return queryStringBuilder.ToString();
+        return endPoint;
     }
 
 
     public async Task<Result> GetTodayByCity(GetTodayByCityRequestModel requestModel)
     {
-        var url = GetApiUrl(requestModel);
+        var url = GetApiEndpoint(requestModel);
+
         if (string.IsNullOrEmpty(url))
             return new Result { Status = false, Message = "City id is null , please enter a valid city id." };
 

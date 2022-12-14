@@ -22,8 +22,8 @@ public class WeatherForecastController : ControllerBase
         var result = _weatherService.GetTodayByCity(requestModel);
 
         if (result.Result.Status)
-            return Ok(result);
+            return Ok(result.Result);
         else
-            return BadRequest(result);
+            return BadRequest(result.Result.Message);
     }
 }
