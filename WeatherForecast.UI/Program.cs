@@ -4,6 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IWeatherService, WeatherService>();
+builder.Services.AddTransient<IUrlBuilder, EndpointBuilder>();
+
 builder.Services.AddFluentValidation(options =>
                 {
                     // Validate child properties and root collection elements

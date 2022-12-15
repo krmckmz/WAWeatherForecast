@@ -1,7 +1,7 @@
 namespace WeatherForecast.Application;
 using System.Text;
 
-public class EndpointBuilder
+public class EndpointBuilder : UrlBuilder
 {
     private readonly StringBuilder urlBuilder = new StringBuilder();
     private readonly StringBuilder paramBuilder = new StringBuilder();
@@ -11,16 +11,19 @@ public class EndpointBuilder
     private const char questionMark = '?';
     private const char equalityMark = '=';
 
-    public string BaseUrl { get; set; }
-    public string ApiKey { get; set; }
-
-    public EndpointBuilder(string baseUrl , string apiKey)
+    public override EndpointBuilder SetBaseUrl(string baseUrl)
     {
-        this.BaseUrl = baseUrl;
-        this.ApiKey = apiKey;
+        BaseUrl = baseUrl;
+        return this;
     }
 
-    public EndpointBuilder Append(string value)
+    public override EndpointBuilder SetApiKey(string apiKey)
+    {
+        ApiKey = apiKey;
+        return this;
+    }
+
+    public override EndpointBuilder Append(string value)
     {
         urlBuilder.Append(value);
         urlBuilder.Append(defaultDelimiter);
@@ -28,14 +31,14 @@ public class EndpointBuilder
         return this;
     }
 
-    public EndpointBuilder AppendParam(string key, string value)
+    public override EndpointBuilder AppendParam(string key, string value)
     {
         paramBuilder.Append($"{key}{equalityMark}{value}");
 
         return this;
     }
 
-    public string Build()
+    public override string Build()
     {
         if (BaseUrl.EndsWith(defaultDelimiter))
             urlBuilder.Insert(default(int), BaseUrl);

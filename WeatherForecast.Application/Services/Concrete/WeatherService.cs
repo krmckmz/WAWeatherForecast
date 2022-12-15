@@ -4,6 +4,12 @@ using Newtonsoft.Json;
 
 public class WeatherService : IWeatherService
 {
+    private readonly IUrlBuilder _urlBuilder;
+    public WeatherService(IUrlBuilder urlBuilder)
+    {
+        _urlBuilder = urlBuilder;
+    }
+
     private const string apiRequestDomain = "http://api.openweathermap.org";
     private const string apiKey = "e7f039d94cc5ced34305901239329810";
 
@@ -12,14 +18,15 @@ public class WeatherService : IWeatherService
         if (String.IsNullOrEmpty(requestModel.CityId))
             return string.Empty;
 
-        var endpointBuilder = new EndpointBuilder(apiRequestDomain, apiKey);
-        string endPoint = endpointBuilder.Append("data")
-                                         .Append("2.5")
-                                         .Append("weather")
-                                         .AppendParam("id", requestModel.CityId)
-                                         .AppendParam("appid", apiKey)
-                                         .AppendParam("units", UnitType.Metric.ToString())
-                                         .Build();
+        string endPoint = _urlBuilder.SetBaseUrl(apiRequestDomain)
+                                     .SetApiKey(apiKey)
+                                     .Append("data")
+                                     .Append("2.5")
+                                     .Append("weather")
+                                     .AppendParam("id", requestModel.CityId)
+                                     .AppendParam("appid", apiKey)
+                                     .AppendParam("units", UnitType.Metric.ToString())
+                                     .Build();
 
         return endPoint;
     }
